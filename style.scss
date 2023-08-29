@@ -1,7 +1,7 @@
 //UTILS
-$mainColor: #88b04b;
-$secondColor: #B55A30;
-$blackColor: #000;
+$menuColor: rgba(0, 0, 0, 0.5);
+$backgroundColor: rgba(255, 255, 255, 0.7);
+$blackColor: white;
 
 //FONTS
 $logoFont: 'Black Ops One', cursive;
@@ -10,6 +10,11 @@ $mainFont: 'Roboto Slab', serif;
 body {
     margin: 0;
     font-family: $mainFont;
+    background-image: url(/images/Forest\ -Nature-Green-Forest.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: fixed;
 }
 
 .container {
@@ -19,9 +24,8 @@ body {
 }
 
 header {
-    background-color: $mainColor;
+    background-color: $menuColor;
     height: 100px;
-    border-bottom: 1px solid $blackColor;
 }
 
 .header {
@@ -48,24 +52,29 @@ header {
     }
 }
 
-.foto {
-    background-image: url(/images/wallpaper-mobile.jpg);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    & button {
-        background-color: $mainColor;
-        border: 3px solid $blackColor;
-        font-size: larger;
-    }
-}
+// .foto {
+//     background-image: url(/images/wallpaper-mobile.jpg);
+//     background-repeat: no-repeat;
+//     background-position: 50%;
+//     background-size: cover;
+//     height: 300px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     & button {
+//         background-color: $mainColor;
+//         border: 3px solid $blackColor;
+//         font-size: larger;
+//     }
+// }
 
 footer {
-    background-color: $mainColor;
+    background-color: $menuColor;
     height: 80px;
-    border-top: 1px solid $blackColor;
+    color: white;
+}
+
+.text {
+    background-color: $backgroundColor;
+    padding: 10px;
 }
