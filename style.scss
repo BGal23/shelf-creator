@@ -1,5 +1,7 @@
 //UTILS
-$mainColor: lightgreen;
+$mainColor: #88b04b;
+$secondColor: #B55A30;
+$blackColor: #000;
 
 //FONTS
 $logoFont: 'Black Ops One', cursive;
@@ -19,10 +21,51 @@ body {
 header {
     background-color: $mainColor;
     height: 100px;
+    border-bottom: 1px solid $blackColor;
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
     &__logo {
         font-family: $logoFont;
+        font-size: 1.5rem;
+        font-weight: 400;
     }
+    &__link {
+        color: $blackColor;
+        text-decoration: none;
+        & span {
+            color: $secondColor;
+        }
+    }
+    &__menu-icon {
+        width: 30px;
+        height: 30px;
+        border: 6px solid $blackColor;
+    }
+}
+
+.foto {
+    background-image: url(/images/wallpaper-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & button {
+        background-color: $mainColor;
+        border: 3px solid $blackColor;
+        font-size: larger;
+    }
+}
+
+footer {
+    background-color: $mainColor;
+    height: 80px;
+    border-top: 1px solid $blackColor;
 }
