@@ -1,3 +1,28 @@
+//UTILS
+$mainColor: lightgreen;
+
+//FONTS
+$logoFont: 'Black Ops One', cursive;
+$mainFont: 'Roboto Slab', serif;
+
 body {
-    color:red
+    margin: 0;
+    font-family: $mainFont;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 90vw;
+    //border: 2px solid red;
+}
+
+header {
+    background-color: $mainColor;
+    height: 100px;
+}
+
+.header {
+    &__logo {
+        font-family: $logoFont;
+    }
 }
