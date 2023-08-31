@@ -64,9 +64,28 @@ header {
         height: 100px;
         border: 6px solid $blackFont;
     }
+    &__label {
+        background-color: $menuColor;
+        color: $whiteFont;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50px;
+        width: 100%;
+        border: none;
+    }
+    &__button-text {
+        font-family: $mainFont;
+        font-size: 20px;
+    }
+    &__hiden {
+        display: none;
+        overflow: hidden;
+    }
 }
 
 footer {
+    padding-top: 1px;
     background-color: $menuColor;
     height: 80px;
     color: $whiteFont;
@@ -74,5 +93,6 @@ footer {
 
 .text {
     padding: 20px;
+    margin: 0;
     text-align: justify;
 }
