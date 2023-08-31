@@ -64,6 +64,13 @@ header {
         height: 100px;
         border: 6px solid $blackFont;
     }
+
+    &__text {
+        padding: 20px;
+        margin: 0;
+        text-align: justify;
+    }
+    
     &__label {
         background-color: $menuColor;
         color: $whiteFont;
@@ -81,7 +88,49 @@ header {
     &__hiden {
         display: none;
         overflow: hidden;
+        & ul {
+        list-style-type: none;
+        }
     }
+    &__title {
+        text-align: center;
+        margin: 0;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 40px;
+
+        &--icon {
+            float: left;
+            margin-right: 10px;
+            max-width: 40px;
+            height: 40px;
+            border: 6px solid $blackFont;
+        }
+
+        &--text {
+            margin: 0;
+            text-align: justify;
+        }
+        
+        &--bottom {
+            position:sticky;
+            left: 100%;
+            float: right;
+            font-size: 1rem;
+            color: $whiteFont;
+            background-color: $menuColor;
+            width: 100px;
+            height: 40px;
+            font-family: $mainFont;
+            border: none;
+            margin-top: 10px;
+        }
+    }
+
 }
 
 footer {
@@ -89,10 +138,4 @@ footer {
     background-color: $menuColor;
     height: 80px;
     color: $whiteFont;
-}
-
-.text {
-    padding: 20px;
-    margin: 0;
-    text-align: justify;
 }
