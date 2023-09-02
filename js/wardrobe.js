@@ -1,11 +1,11 @@
 const buttonWardrobe = document.getElementById("wardrobe-generate")
 const type = document.querySelector(".wardrobe__title")
-let bok = {};
-let kranc = {};
-let cokół = {};
-let półka = {};
-let plecy = {};
-let front = {};
+// let bok = {};
+// let kranc = {};
+// let cokół = {};
+// let półka = {};
+// let plecy = {};
+// let front = {};
 let szafa = [];
 
 
@@ -19,7 +19,7 @@ const wardrobe = () => {
     let plinth = document.getElementById("wardrobe-plinth").value;
     let shelfs = document.getElementById("wardrobe-shelfs").value;
 
-    bok = {
+    let bok = {
         nazwa: name,
         rodzaj: `${type.textContent}-bok`,
         ilość: 2 * quantity,
@@ -29,8 +29,9 @@ const wardrobe = () => {
         okleinaSzer: 2,
         grubość: plate
     }
+    szafa.push(bok);
 
-    kranc = {
+    let kranc = {
         nazwa: name,
         rodzaj: `${type.textContent}-kranc`,
         ilość: 2 * quantity,
@@ -40,8 +41,10 @@ const wardrobe = () => {
         okleinaSzer: 0,
         grubość: plate
     }
+    szafa.push(kranc);
 
-    cokół = {
+    if (hidenCheck[0].checked) {
+    let cokół = {
         nazwa: name,
         rodzaj: `${type.textContent}-cokół`,
         ilość: quantity,
@@ -50,42 +53,54 @@ const wardrobe = () => {
         szerokość: plinth,
         okleinaSzer: 0,
         grubość: plate
+        }
+    szafa.push(cokół);
+    }
+    
+    if (hidenCheck[1].checked) {
+        let półka = {
+            nazwa: name,
+            rodzaj: `${type.textContent}-półka`,
+            ilość: shelfs * quantity,
+            długość:  width - 2 * plate,
+            okleinaDł: 2,
+            szerokość: deep - 10,
+            okleinaSzer: 0,
+            grubość: plate
+        }
+    szafa.push(półka);
     }
 
-    półka = {
-        nazwa: name,
-        rodzaj: `${type.textContent}-półka`,
-        ilość: 2 * quantity,
-        długość:  width - 2 * plate,
-        okleinaDł: 2,
-        szerokość: deep - 10,
-        okleinaSzer: 0,
-        grubość: plate
+    if (hidenCheck[2].checked) {
+        let plecy = {
+            nazwa: name,
+            rodzaj: `${type.textContent}-plecy`,
+            ilość: quantity,
+            długość: height - plinth - 6,
+            okleinaDł: 0,
+            szerokość: width - 6,
+            okleinaSzer: 0,
+            grubość: plate
+        }
+    szafa.push(plecy);
     }
 
-    plecy = {
-        nazwa: name,
-        rodzaj: `${type.textContent}-plecy`,
-        ilość: quantity,
-        długość: height - plinth - 6,
-        okleinaDł: 0,
-        szerokość: width - 6,
-        okleinaSzer: 0,
-        grubość: plate
+    if (hidenCheck[3].checked) {
+        let front = {
+            nazwa: name,
+            rodzaj: `${type.textContent}-front`,
+            ilość: quantity,
+            długość: height,
+            okleinaDł: 2,
+            szerokość: width,
+            okleinaSzer: 2,
+            grubość: plate
+        }
+    szafa.push(front);
     }
-
-    front = {
-        nazwa: name,
-        rodzaj: `${type.textContent}-front`,
-        ilość: quantity,
-        długość: height,
-        okleinaDł: 2,
-        szerokość: width,
-        okleinaSzer: 2,
-        grubość: plate
-    }
-
-    console.log(bok, kranc, cokół, półka, plecy, front)
+    
+    console.log(szafa)
 }
 
 buttonWardrobe.addEventListener("click", wardrobe)
+
