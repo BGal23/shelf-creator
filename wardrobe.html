@@ -24,57 +24,57 @@
         <div class="container">
             <section class="wardrobe background">
                 <div class="wardrobe__box">
-                    <h3 class="wardrobe__title">Temat Pierwszy</h3>
-                    <form class="wardrobe__form">
+                    <h2 class="wardrobe__title">Szafa</h2>
+                    <from class="wardrobe__form">
                         <div>
                             <p>Wysokość</p>
-                            <input type="number"/>
+                            <input id="wardrobe-height" type="number"/>
                         </div>
                         <div>
                             <p>Szerokość</p>
-                            <input type="number"/>
+                            <input id="wardrobe-width" type="number"/>
                         </div>
                         <div>
                             <p>Głębokość</p>
-                            <input type="number"/>
+                            <input id="wardrobe-deep" type="number"/>
                         </div>
                         <div>
                             <p>Grubość płyty</p>
-                            <input type="number"/>
+                            <input id="wardrobe-plate" type="number"/>
                         </div>
                         <div>
                             <p>
                                 <span>Cokół</span>
-                                <input id="scoleCheck" type="checkbox"/>
+                                <input class="wardrobe__form--checkbox" type="checkbox"/>
                             </p>
-                            <input class="wardrobe__form--socle" type="number"/>
+                            <input id="wardrobe-plinth" class="wardrobe__form--hiden" type="number"/>
                         </div>
                         <div>
                             <p>
                                 <span>Półki</span>
-                                <input type="checkbox"/>
+                                <input class="wardrobe__form--checkbox" type="checkbox"/>
                             </p>
-                            <input type="number" min="1" max="7" step="1"/>
+                            <input id="wardrobe-shelfs" class="wardrobe__form--hiden" type="number" min="1" max="7" step="1" value="1"/>
                         </div>
                         <div>
                             <p>
                                 <span>Plecy</span>
-                                <input type="checkbox"/>
+                                <input class="wardrobe__form--checkbox" type="checkbox"/>
                             </p>
-                            <form>
-                                HDF<input type="radio" name="doors" checked/>
-                                Płyta<input type="radio" name="doors"/>
-                            </form>
+                            <div class="wardrobe__form--hiden">
+                                HDF<input type="radio" name="back" checked/>
+                                Płyta<input type="radio" name="back"/>
+                            </div>
                         </div>
                         <div>
                             <p>
                                 <span>Front</span>
-                                <input type="checkbox"/>
+                                <input class="wardrobe__form--checkbox" type="checkbox"/>
                             </p>
-                            <form>
+                            <div class="wardrobe__form--hiden">
                                 Jednodrzwiowe<input type="radio" name="doors" checked/>
                                 Dwudrzwiowe<input type="radio" name="doors"/>
-                            </form>
+                            </div>
                         </div>
                         <div>
                             <p>
@@ -82,9 +82,45 @@
                                 <input type="checkbox"/>
                             </p>
                         </div>
-                        <button type="button">Wygeneruj</button>
-                    </form>
+                        <button id="wardrobe-generate" type="button">Wygeneruj</button>
+                    </from>
                 </div>
+            </section>
+            <section class="table background">
+                <table class="table__box">
+                    <caption>
+                        Zestawienie Elementów
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Numer</th>
+                            <th>Rodzaj</th>
+                            <th>Ilość</th>
+                            <th>Długość</th>
+                            <th>Okleina z długości</th>
+                            <th>Szerokość</th>
+                            <th>Okleina z szerokości</th>
+                            <th>Grubość</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>x</td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                        <tr>
+                            <td>z</td>
+                            <td>z</td>
+                            <td>z</td>
+                        </tr>
+                        <tr>
+                            <td>y</td>
+                            <td>y</td>
+                            <td>y</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
         </div>
     </main>
@@ -93,6 +129,7 @@
             <p>Strona powstała w celach edukacyjnych jako jeden z projektów podczas nauki języka Java Script oraz HTML i CSS.</p>
         </div>
     </footer>
+    <script src="./js/hiden-options.js"></script>
     <script src="./js/wardrobe.js"></script>
 </body>
 </html>

@@ -149,7 +149,6 @@ footer {
 
 .wardrobe {
     &__box {
-        background-color: $backgroundColor;
         padding-left: 10px;
     }
     &__title {
@@ -157,8 +156,26 @@ footer {
         padding-top: 10px;
     }
     &__form {
-        &--socle {
+        &--hiden {
             display: none;
         }
     }
+}
+
+.table {
+    padding: 10px;
+    &__box {
+        border-collapse: collapse;
+    }
+    & th {
+        height: 100px;
+        border: 1px solid black;
+        //transform: rotate(-90deg);
+    }
+    & td {
+        border: 1px solid black;
+    }
+    // &__box {
+    //     border-collapse: collapse;
+    // }
 }
