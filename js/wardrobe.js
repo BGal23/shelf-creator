@@ -15,7 +15,7 @@ const wardrobe = () => {
     let plinth = document.getElementById("wardrobe-plinth").value;
     let shelfs = document.getElementById("wardrobe-shelfs").value;
     const hidenAletr = document.querySelectorAll(".wardrobe__form--alert")
-    let tableAlert = [name, quantity, height, width, deep, plate]
+    let tableAlert = [quantity, height, width, deep, plate]
     
     for (let i = 0; i < tableAlert.length; i++) {
     if(tableAlert[i] === "") {
@@ -26,7 +26,9 @@ const wardrobe = () => {
     }
     else {
         hidenAletr[i].textContent = ""
+    }
 
+    if (quantity > 0 & height > 0 & width > 0 & deep > 0 & plate > 0) {
     let bok = {
         nazwa: name,
         rodzaj: `${type.textContent}-bok`,
