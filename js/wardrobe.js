@@ -1,6 +1,7 @@
 const buttonWardrobe = document.getElementById("wardrobe-generate")
 const type = document.querySelector(".wardrobe__title")
 const newTable = document.getElementById("new-table")
+const hidenTable = document.querySelector(".table")
 let szafa = [];
 
 
@@ -13,6 +14,18 @@ const wardrobe = () => {
     let plate = document.getElementById("wardrobe-plate").value;
     let plinth = document.getElementById("wardrobe-plinth").value;
     let shelfs = document.getElementById("wardrobe-shelfs").value;
+    const hidenAletr = document.querySelectorAll(".wardrobe__form--alert")
+    let tableAlert = [name, quantity, height, width, deep, plate]
+    
+    for (let i = 0; i < tableAlert.length; i++) {
+    if(tableAlert[i] === "") {
+        hidenAletr[i].textContent = "Wpisz poprawną wartość"
+    }
+    else if (tableAlert[i] < 0) {
+        hidenAletr[i].textContent = "Wartość musi być liczbą większą od 0"
+    }
+    else {
+        hidenAletr[i].textContent = ""
 
     let bok = {
         nazwa: name,
@@ -107,8 +120,14 @@ const wardrobe = () => {
         </tr>`
         ).join(" ");
 
-        newTable.innerHTML= szafaElements
-}
+    newTable.innerHTML= szafaElements
+
+    hidenTable.style.display = "none"
+    if (hidenTable.style.display === "none") {
+        hidenTable.style.display = "block"
+    }
+
+}}}
 
 buttonWardrobe.addEventListener("click", wardrobe)
 
