@@ -1,7 +1,8 @@
-const buttonWardrobe = document.getElementById("wardrobe-generate")
-const type = document.querySelector(".wardrobe__title")
-const newTable = document.getElementById("new-table")
-const hidenTable = document.querySelector(".table")
+const buttonWardrobe = document.getElementById("wardrobe-generate");
+const type = document.querySelector(".wardrobe__title");
+const newTable = document.getElementById("new-table");
+const hidenTable = document.querySelector(".table");
+const drawingBox = document.getElementById("drawing-box")
 let szafa = [];
 
 
@@ -109,6 +110,36 @@ const wardrobe = () => {
         }
     szafa.push(front);
     }
+
+    let scale = 6;
+    let div = document.createElement("div");
+    drawingBox.append(div);
+
+    div.style.height = `${height/scale}px`;
+    div.style.width = `${plate/scale}px`;
+
+    div = document.createElement("div");
+    drawingBox.append(div);
+
+    div.style.bottom = `${(height/scale)/2-(plate/scale/2)}px`;
+    div.style.height = `${plate/scale}px`;
+    div.style.width = `${(width-2*plate)/scale}px`;
+
+    div = document.createElement("div");
+    drawingBox.append(div);
+
+    div.style.top = `${height/scale + 20-(plate/scale)}px`;
+    div.style.height = `${plate/scale}px`;
+    div.style.width = `${(width-2*plate)/scale}px`;
+    div.style.position = "absolute"
+
+    div = document.createElement("div");
+    drawingBox.append(div);
+
+    div.style.height = `${height/scale}px`;
+    div.style.width = `${plate/scale}px`;
+
+
 
     let szafaElements = szafa.map((value) => `
         <tr>

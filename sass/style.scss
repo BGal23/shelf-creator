@@ -169,6 +169,20 @@ footer {
     }
 }
 
+.drawing{
+    height: auto;
+    display: flex;
+    //flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    & div {
+        border: 1px solid black;
+        position: relative;
+    }
+}
+
 .table {
     display: none;
     overflow: scroll;
@@ -179,7 +193,6 @@ footer {
     & th {
         height: 100px;
         border: 1px solid black;
-        //transform: rotate(-90deg);
     }
     & td {
         border: 1px solid black;
