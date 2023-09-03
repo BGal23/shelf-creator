@@ -18,14 +18,15 @@ const wardrobe = () => {
     let tableAlert = [quantity, height, width, deep, plate]
     
     for (let i = 0; i < tableAlert.length; i++) {
-    if(tableAlert[i] === "") {
-        hidenAletr[i].textContent = "Wpisz poprawną wartość"
-    }
-    else if (tableAlert[i] < 0) {
-        hidenAletr[i].textContent = "Wartość musi być liczbą większą od 0"
-    }
-    else {
-        hidenAletr[i].textContent = ""
+        if(tableAlert[i] === "") {
+            hidenAletr[i].textContent = "Wpisz poprawną wartość"
+        }
+        else if (tableAlert[i] < 0) {
+            hidenAletr[i].textContent = "Wartość musi być liczbą większą od 0"
+        }
+        else {
+            hidenAletr[i].textContent = ""
+        }
     }
 
     if (quantity > 0 & height > 0 & width > 0 & deep > 0 & plate > 0) {
@@ -129,7 +130,7 @@ const wardrobe = () => {
         hidenTable.style.display = "block"
     }
 
-}}}
+}}
 
 buttonWardrobe.addEventListener("click", wardrobe)
 
