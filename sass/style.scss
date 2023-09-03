@@ -163,6 +163,7 @@ footer {
 }
 
 .table {
+    overflow: scroll;
     padding: 10px;
     &__box {
         border-collapse: collapse;
