@@ -1,11 +1,6 @@
 const buttonWardrobe = document.getElementById("wardrobe-generate")
 const type = document.querySelector(".wardrobe__title")
-// let bok = {};
-// let kranc = {};
-// let cokół = {};
-// let półka = {};
-// let plecy = {};
-// let front = {};
+const newTable = document.getElementById("new-table")
 let szafa = [];
 
 
@@ -23,7 +18,7 @@ const wardrobe = () => {
         nazwa: name,
         rodzaj: `${type.textContent}-bok`,
         ilość: 2 * quantity,
-        długość: height,
+        długość: height * 1,
         okleinaDł: 2,
         szerokość: deep,
         okleinaSzer: 2,
@@ -98,8 +93,21 @@ const wardrobe = () => {
         }
     szafa.push(front);
     }
-    
-    console.log(szafa)
+
+    let szafaElements = szafa.map((value) => `
+        <tr>
+            <td>${value.nazwa}</td>
+            <td>${value.rodzaj}</td>
+            <td>${value.ilość}</td>
+            <td>${value.długość}</td>
+            <td>${value.okleinaDł}</td>
+            <td>${value.szerokość}</td>
+            <td>${value.okleinaSzer}</td>
+            <td>${value.grubość}</td>
+        </tr>`
+        ).join(" ");
+
+        newTable.innerHTML= szafaElements
 }
 
 buttonWardrobe.addEventListener("click", wardrobe)
